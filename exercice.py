@@ -23,15 +23,23 @@ def bills(value):
 	# TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
 	while value != 0:
 		if value >= 20:
+			twenties = value // 20
+			value = value % 20
 			pass
 		elif value >= 10:
+			tens = value // 10
+			value = value % 10
 			pass
 		elif value >= 5:
+			fives = value // 5
+			value = value % 5
 			pass
 		elif value >= 1:
+			ones = value // 1
+			value = value % 1
 			pass
 
-	return (twenties, tens, fives, twos, ones);
+	return (twenties, tens, fives, ones);
 
 if __name__ == "__main__":
 	print(dissipated_power(69, 420))
